@@ -1,0 +1,14 @@
+import pandas as pd
+import numpy as np
+
+# Load training data
+train_data = pd.read_csv("train.csv")
+test_data = pd.read_csv("test.csv")
+
+# Display Unique Galaxies in train data
+#print(train_data.galaxy.unique())
+
+# Display Unique Galaxies in test data
+print(np.setdiff1d(train_data.galaxy.unique(),test_data.galaxy.unique()))
+
+
